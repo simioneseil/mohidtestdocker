@@ -1,0 +1,9 @@
+MINIMUMDEPTH              : 0.0002
+
+<begindomain>
+ID                        : 1
+TYPE                      : CARTESIANTOP
+LAYERS                    : 11
+LAYERTHICKNESS            : 2.5 0.5 0.2 0.2 0.1 0.1 0.1 0.1 0.1 0.05 0.05
+MIN_BOTTOM_THICKNESS      : 0.001
+<enddomain>

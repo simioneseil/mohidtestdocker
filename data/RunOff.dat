@@ -1,0 +1,50 @@
+
+TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+Output Options
+!OUTPUT_TIME               : 0. 3600.
+
+!Start / Continuous Computation
+CONTINUOUS                : 0
+
+!Compute Options
+HYDRODYNAMIC_APROX        : 3
+MIN_WATER_COLUMN          : 0.0001
+
+ADJUST_SLOPE              : 1
+DISCHARGES                : 0
+IMPOSE_BOUNDARY_VALUE     : 0
+BOUNDARY_VALUE            : 0
+SIMPLE_CHANNEL_FLOW       : 1
+ROUTE_D4                  : 1
+ROUTE_D4_ON_DN            : 1
+
+WRITE_MAX_FLOW_FILE       : 1
+WRITE_MAX_WATER_COLUMN    : 1
+
+CHANNEL_LINK_METHOD       : 4
+
+LIMIT_DT_VARIATION        : 1
+STABILIZE                 : 1
+STABILIZE_FACTOR          : 0.01
+MAX_ITERATIONS            : 10000
+MIN_ITERATIONS            : 4
+
+DT_FACTOR                 : 1.5
+DT_SPLIT_FACTOR           : 1.25
+
+LIMIT_DT_COURANT          : 0
+MAX_COURANT               : 0.5
+
+
+<BeginOverLandCoefficient>
+  FILE_IN_TIME            : NONE
+  INITIALIZATION_METHOD   : CONSTANT
+  REMAIN_CONSTANT         : 1
+  DEFAULTVALUE            : 0.08
+<EndOverLandCoefficient>
+
+<BeginInitialWaterColumn>
+NAME                      : initial water column
+DEFAULTVALUE              : 0
+REMAIN_CONSTANT           : 0
+<EndInitialWaterColumn>

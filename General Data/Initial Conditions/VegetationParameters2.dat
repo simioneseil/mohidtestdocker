@@ -1,0 +1,31 @@
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 1                
+  NAME                      : PAST
+  VEGETATION_ID             : 12                
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 280.
+!PLANTING_HUBASE                   : 0.15
+MATURITY_HU                       : 1800.
+<endtimingparameters>
+
+!<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : -99.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.8       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 0.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+!<endgrazeparameters>
+
+!<beginharvestkillparameters>
+   !HARVESTKILL_JULIANDAY   : 152
+   !HARVEST_EFFICIENCY      : 1.0
+!<endharvestkillparameters>
+
+<endagriculturalpractice>
+

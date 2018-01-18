@@ -1,0 +1,262 @@
+!MOHID Studio Sample Data File
+!This file contains the most common options.
+!MODULE: SedimentQuality
+!Please complete and comment/uncomment for your specific needs
+!
+!
+!
+!!!!!!!!!!!!!!!!!MAIN SEDIMENT OPTIONS!!!!!!!!!!!!!!!!
+!++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+NITROGEN                  : 1
+CARBON                    : 1
+PHOSPHORUS                : 1
+OXYGEN                    : 1
+SOL_BACTERIA              : 0
+
+DTSECONDS                 : 3600.
+NO3_LIMIT                 : 0. 
+CHANGE_RATES              : 0  
+NEW_RATES                 : 1  
+!IMOBILIZATION : 0
+
+EXPLICIT                  : 1
+!IMPLICIT  ! not working?
+!SEMIIMP
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!RATES!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+!!!! Organic Matter Decay !!!!
+
+<begin_Labil_OM_C_Rate>
+AE                        : 15.1        
+Acoef                     : 9.0E-10     
+kp                        : 12.3	    
+Temperature               : 35          
+
+OptimumpH                 : 7           
+ConcOptO2                 : 10          
+<end_Labil_OM_C_Rate>
+
+<begin_RefractOM_C_Rate>
+AE                        : 15.1
+Acoef                     : 0.653E-11   
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7           
+ConcOptO2                 : 10          
+<end_RefractOM_C_Rate>
+
+
+!!!! Microorganisms Death !!!!!
+
+<begin_Heterotrophs_Rate>
+AE                        : 15.19
+Acoef                     : 1.01E-30    
+kp                        : 12.3
+Temperature               : 35
+
+ConcMinCarbon             : 1000.       
+OptimumpH                 : 7           
+ConcOptO2                 : 10          
+<end_Heterotrophs_Rate>
+
+<begin_Autotrophs_Rate>
+AE                        : 12.64
+Acoef                     : 1.35E-35    
+kp                        : 12.3
+Temperature               : 35
+
+ConcMinAmmonia            : 1.          
+OptimumpH                 : 7           
+ConcOptO2                 : 10          
+<end_Autotrophs_Rate>
+
+<begin_Anaerobic_Rate>
+AE                        : 12.83
+Acoef                     : 4.76E-33    
+kp                        : 0.
+Temperature               : 35
+
+ConcMinNitrate            : 1.          
+ConcMinCarbon             : 1000.       
+OptimumpH                 : 7           
+<end_Anaerobic_Rate>
+
+
+!!!! Nitrification !!!!!
+
+<begin_AmmoniaToNitrate_Rate>
+AE                        : 21
+Acoef                     : 6.99E-5   
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_AmmoniaToNitrate_Rate>
+
+
+!!!! Ammonia Immobilization !!!!!
+
+<begin_AmmoniaImobilization_Rate>
+AE                        : 15.1
+Acoef                     : 5E-07
+kp                        : 12.3
+Temperature               : 35
+<end_AmmoniaImobilization_Rate>
+
+
+!!!! Denitrification !!!!!
+
+<begin_NitrateToNgas_Rate>
+AE                        : 12.6
+Acoef                     : 9.99E-10  
+kp                        : 0
+Temperature               : 35
+
+ConcOptCarbon             : 10000.    
+OptimumpH                 : 7         
+<end_NitrateToNgas_Rate>
+
+
+!!!! Nitrate Immobilization !!!!!
+
+<begin_NitrateImobilization_Rate>
+AE                        : 15.1
+Acoef                     : 5E-07
+kp                        : 12.3
+Temperature               : 35
+<end_NitrateImobilization_Rate>
+
+
+!!!! Urea hydrolysis !!!!!
+
+<begin_Urea_Hydrolysis>
+AE                        : 12.6
+Acoef                     : 2.50E-04
+kp                        : 0
+Temperature               : 35
+<end_Urea_Hydrolysis>
+
+
+!!!! Phsphorus Immobilization !!!!!
+
+<begin_PhosphorusImobilization_Rate>
+AE                        : 15.1
+Acoef                     : 1.955E-9  
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_PhosphorusImobilization_Rate>
+
+
+!!!! Methane Production !!!!! -> testi
+
+<begin_methane_production>
+AE                        : 12.6
+Acoef                     : 1.252E-12 
+kp                        : 0
+Temperature               : 35
+
+OptimumpH                 : 7         
+<end_methane_production>
+
+
+!!!! Solubilizing Bacteria  !!!!!
+
+<begin_Sol_Rate>
+AE                        : 15.19
+Acoef                     : 5.00E-35
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_Sol_Rate>
+
+<begin_Labil_OM_C_sol_Rate>
+AE                        : 1.64E-04
+Acoef                     : 7.92E-10
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_Labil_OM_C_sol_Rate>
+
+
+<begin_RefractOM_C_sol_Rate>
+AE                        : 2.02E-04
+Acoef                     : 2.58E-10
+kp                        : 12.3
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_RefractOM_C_sol_Rate>
+
+
+<begin_Solubilizing_Rate>
+AE                        : 12.6
+Acoef                     : 1.10E-13
+kp                        : 0
+Temperature               : 35
+
+OptimumpH                 : 7         
+ConcOptO2                 : 10        
+<end_Solubilizing_Rate>
+
+
+
+
+!!!!!!!!!!!!!!!!!!MICROORGANISMS!!!!!!!!!!!!!!!!!!!!!!!
+!++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<begin_Heterotrophs>
+CN_RATIO                  : 3.40       
+CP_RATIO                  : 12.09      
+POPULATION_CARBON_RATIO   : 950        
+CARBON_EFICIENCY          : 0.13       
+NITROGEN_EFICIENCY        : 0          
+MINIMUM_POPULATION        : 50000.     
+<end_Heterotrophs>
+
+<begin_Autotrophs>
+CN_RATIO                  : 2.01
+CP_RATIO                  : 13.82
+POPULATION_CARBON_RATIO   : 9500       
+CARBON_EFICIENCY          : 0
+NITROGEN_EFICIENCY        : 0.01
+MINIMUM_POPULATION        : 500.
+<end_Autotrophs>
+
+<begin_Anaerobic>
+CN_RATIO                  : 3.40
+CP_RATIO                  : 13.82
+POPULATION_CARBON_RATIO   : 9500       
+CARBON_EFICIENCY          : 0.1
+NITROGEN_EFICIENCY        : 0.1
+MINIMUM_POPULATION        : 500.
+<end_Anaerobic>
+
+<begin_Sols>
+CN_RATIO                  : 8
+CP_RATIO                  : 60
+POPULATION_CARBON_RATIO   : 950        
+CARBON_EFICIENCY          : 0.1
+NITROGEN_EFICIENCY        : 0.1
+<end_Sols>
+
+
+!
+!For more information about MOHID please visit MOHID's forum: http://www.mohid.com/forum/
+!Copyright (C) 2012. Action Modulers. http://www.actionmodulers.com
+!

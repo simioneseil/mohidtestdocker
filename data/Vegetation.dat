@@ -1,0 +1,194 @@
+<begin_AgriculturalPractices>
+ASCII Grid - agric practices have spatial variation but not in time (Disabled. Presented as example)
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\Practices.dat
+DEFAULTVALUE              : 0
+DATA_COLUMN                : 2
+REMAIN_CONSTANT           : 0
+USE_ORIGINAL_VALUES       : 1
+<end_AgriculturalPractices>
+
+MODEL_EVOLUTION           : 2
+CORRECT_NEGATIVE_LAI      : 1
+
+!Databases needed
+!General parameters for each vegetation type - always readed
+PARAMETERS_FILE           : ..\General Data\Initial Conditions\VegetationParameters2.dat
+
+!Readed if WATER_UPTAKE_METHOD : 1 - based on feddes suction head minimum. maximum and optimum
+FEDDES_DATABASE           : ..\General Data\Initial Conditions\FeddesDatabase.dat
+
+!Growth parameters for each vegetation type - readed in case of vegetation growth simulation
+GROWTH_DATABASE           : ..\General Data\Initial Conditions\GrowthDatabase_SWAT2005vArcView.dat
+!Readed if growth simulation and PESTICIDE : 1
+PESTICIDE_DATABASE        : ..\General Data\Initial Conditions\GrowthDatabase_SWAT2005vArcView.dat
+
+!Readed if growth simulation and if FERTILIZATION : 1
+FERTILIZER_DATABASE       : ..\General Data\Initial Conditions\GrowthDatabase_SWAT2005vArcView.dat
+
+
+VEGETATION_DT             : 86400.
+INTEGRATION_DT            : 86400.
+
+WATER_STRESS              : 1
+NITROGEN_STRESS           : 0
+PHOSPHORUS_STRESS         : 0
+TEMPERATURE_STRESS        : 1
+
+ADJUST_RUE_FOR_CO2        : 1
+ADJUST_RUE_FOR_VPD        : 1
+
+GRAZING                   : 0
+HARVEST_KILL              : 0
+DORMANCY                  : 0
+FERTILIZATION             : 0
+NUTRIENT_FLUXES_WITH_SOIL : 0
+
+LIMIT_TRANSP_WATER_VEL    : 0
+WATER_UPTAKE_METHOD       : 1 
+ROOT_PROFILE              : 3 
+WATER_UPTAKE_STRESS_METHOD :  1 
+
+NUTRIENT_UPTAKE_METHOD    : 2 
+
+TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+
+
+CHANGE_LAI_SENESCENCE     : 0
+CHANGE_CANOPY_HEIGHT      : 0
+
+OUTPUT_TIME               : 0. 86400.
+ATMOSPHERE_OUTPUT         : 1
+FLUXES_TO_SOIL_OUTPUT     : 1
+
+
+<beginproperty>
+NAME                      : total plant biomass
+UNITS                     : kg/ha
+DESCRIPTION               : plant biomass
+EVOLUTION                 : 2
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+
+<beginproperty>
+NAME                      : root depth
+UNITS                     : m
+DESCRIPTION               : plant root depth
+EVOLUTION                 : 2
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : root biomass
+UNITS                     : kg/ha
+DESCRIPTION               : plant root biomass
+EVOLUTION                 : 2
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+
+
+
+<beginproperty>
+NAME                      : leaf area index
+UNITS                     : m2/m2
+DESCRIPTION               : plant leaf area index
+EVOLUTION                 : 2
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : canopy height
+UNITS                     : m
+DESCRIPTION               : plant canopy height
+EVOLUTION                 : 2
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+
+<beginproperty>
+NAME                      : specific leaf storage
+UNITS                     : m3/m2
+DESCRIPTION               : plant specific leaf storage
+EVOLUTION                 : 1
+OLD                       : 0
+DEFAULTVALUE              : 0.
+REMAIN_CONSTANT           : 1
+OUTPUT_HDF                : 0
+TIME_SERIE                : 0
+<endproperty>
+
+<beginproperty>
+NAME                      : crop coefficient
+UNITS                     : -
+DESCRIPTION               : plant transpiration coefficient
+EVOLUTION                 : 1
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\CropCoefficient.dat
+DATA_COLUMN               : 5
+DEFAULTVALUE              : 1.0
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 0
+TIME_SERIE                : 1
+<endproperty>
+
+!<beginproperty>
+NAME                      : total plant nitrogen
+UNITS                     : kg/ha
+DESCRIPTION               : plant nitrogen content
+EVOLUTION                 : 2
+OLD                       : 0
+!DEFAULTVALUE              : 50.
+DEFAULTVALUE              : 0
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 1
+TIME_SERIE                : 1
+BOX_TIME_SERIE            : 0
+!<endproperty>
+
+!<beginproperty>
+NAME                      : total plant phosphorus
+UNITS                     : kg/ha
+DESCRIPTION               : plant phosphorus content
+EVOLUTION                 : 2
+OLD                       : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+!DEFAULTVALUE              : 1.
+DEFAULTVALUE              : 0
+REMAIN_CONSTANT           : 0
+OUTPUT_HDF                : 1
+TIME_SERIE                : 1
+BOX_TIME_SERIE            : 0
+!<endproperty>
+
+
+<begin_TotalPotentialHU>
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 5475. 
+REMAIN_CONSTANT           : 0
+<end_TotalPotentialHU>
+NUTRIENT_REDUCE_UPTAKE    : 0
+
+

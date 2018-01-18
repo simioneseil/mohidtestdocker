@@ -1,0 +1,40 @@
+!<beginfeddesdatabase>
+!VEGETATION_ID             : 109                !crop ID used in this practice that has correspondence to SWAT crop growth database (see growth database)
+!FEDDES_TYPE               : 2
+!FEDDES_H1                 : -0.15
+!FEDDES_H2                 : -0.30
+!FEDDES_H3                 : -6.0
+!FEDDES_H3H                : -3.25
+!FEDDES_H3L                : -6.00
+!FEDDES_H4                 : -80.0
+!FEDDES_R2L                : 1.15741E-08
+!FEDDES_R2H                : 5.78704E-08       !lower head  for transpiration (wilting)
+
+Salinity Stress parameters for sorghum
+USE_SALINITY_STRESS       : 1
+SALINITY_STRESS_THRESHOLD : 13.6
+SALINITY_STRESS_SLOPE     : 8
+!
+Interaction method between water stress and salinity stress
+STRESS_INTERACTION        : 2 
+<endfeddesdatabase>
+
+
+!<beginfeddesdatabase>
+!VEGETATION_ID             : 19
+
+!FEDDES_H1                 : -0.1
+!FEDDES_H2                 : -0.25
+!FEDDES_H3                 : -6.0
+!FEDDES_H4                 : -30.0
+!<endfeddesdatabase>
+
+<beginfeddesdatabase>
+VEGETATION_ID             : 12           
+FEDDES_H1                 : -0.15
+FEDDES_H2                 : -0.3
+FEDDES_H3                 : -3
+FEDDES_H4                 : -80
+<endfeddesdatabase>
+
+

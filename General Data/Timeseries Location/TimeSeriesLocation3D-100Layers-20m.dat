@@ -1,0 +1,68 @@
+DT_OUTPUT_TIME                  : 86400
+MAX_BUFFER_SIZE                 : 10000
+
+<BeginTimeSerie>
+NAME                            : Layer_Top
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 11
+<EndTimeSerie>
+
+<BeginTimeSerie>
+NAME                            : Layer_10cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 10
+<EndTimeSerie>
+
+
+<BeginTimeSerie>
+NAME                            : Layer_20cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 9
+<EndTimeSerie>
+
+<BeginTimeSerie>
+NAME                            : Layer_30cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 8
+<EndTimeSerie>
+
+
+<BeginTimeSerie>
+NAME                            : Layer_40cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 7
+<EndTimeSerie>
+
+<BeginTimeSerie>
+NAME                            : Layer_50cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 6
+<EndTimeSerie>
+
+<BeginTimeSerie>
+NAME                            : Layer_60cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 5
+<EndTimeSerie>
+
+<BeginTimeSerie>
+NAME                            : Layer_Interface100cm
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 4
+<EndTimeSerie>
+
+
+<BeginTimeSerie>
+NAME                            : Layer_Bottom
+LOCALIZATION_I                  : 2
+LOCALIZATION_J                  : 2
+LOCALIZATION_K                  : 1
+<EndTimeSerie>

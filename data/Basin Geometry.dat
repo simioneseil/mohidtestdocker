@@ -1,0 +1,6 @@
+TRESHOLD_AREA             : 500000
+DELINEATE_BASIN           : 0
+RESERVOIRS                : 0
+OUTPUT_HDF5               : 0
+DRAINED_AREA              : 0
+PERMEABLE_FRACTION        : 1.00

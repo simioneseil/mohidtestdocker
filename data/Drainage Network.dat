@@ -1,0 +1,33 @@
+!MOHID Studio Sample Data File
+!This file contains the most common options.
+!MODULE: Drainage Network
+!Please complete and comment/uncomment for your specific needs
+!
+!
+!
+!Compute Options
+NETWORK_FILE              : ..\General Data\Digital Terrain\Drainage Network.dnt
+GLOBAL_MANNING            : 0.15
+MIN_WATER_DEPTH           : 0.0001
+DISCHARGES                : 0
+HYDRODYNAMIC_APROX        : 1   
+DOWNSTREAM_BOUNDARY       : 1   
+!DEFAULT_VALUE            : 1.0 
+STABILIZE                 : 1
+STABILIZE_FACTOR          : 0.05
+
+!GEO_CONVERSATION_FACTOR   : 110000  
+
+!Start / Continuous Computation
+INITIAL_WATER_DEPTH       : 0.0
+CONTINUOUS                : 0
+
+!Output Options
+TIME_SERIE_LOCATION       : ..\General Data\NodeTimeSeriesLocation.dat
+OUTPUT_TIME               : 3600.
+
+
+!
+!For more information about MOHID please visit MOHID's forum: http://www.mohid.com/forum/
+!Copyright (C) 2010. Action Modulers, http://www.actionmodulers.com
+!

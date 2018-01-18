@@ -1,0 +1,746 @@
+OUTPUT_TIME               : 0 86400
+
+TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+
+
+
+!Compute Options
+ADVDIFF_EXPLICIT          : 0  !(1 - adv diff explicit; 0 - vertical adv diff is implicit. horizontal remains explicit)
+ADVDIFF_ADVECTION_H_IMP_EXP :  1  !(read if ADVDIFF_EXPLICIT : 0; 0 - horizontal adv implicit; 1 - horizontal adv explicit)
+
+NEW_FORMULATION           : 1   !1 - do not use moduleadvectiondiffusion (removed advection computation); 0 - old formulation
+ADVDIFF_METHOD_H          : 1   !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4.
+!CentralDif = 5. LeapFrog = 6
+ADVDIFF_METHOD_V          : 1   !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4.
+!CentralDif = 5. LeapFrog = 6
+
+
+<begin_dispersion_long>
+NAME                      : dispersion long
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 1
+<end_dispersion_long>
+
+<begin_dispersion_trans>
+NAME                      : dispersion trans
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 1
+<end_dispersion_trans>
+
+
+<beginproperty>
+NAME                      : temperature
+UNITS                     : ?C
+DESCRIPTION               : temperature
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 20
+ADVECTION_DIFFUSION       : 1
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+TRANSPORTED_IN_EVTP       : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : nitrate
+UNITS                     : mg/l
+DESCRIPTION               : nitrate in soil solution
+PARTICULATE               : 0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_METHOD_V          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+ADVDIFF_METHOD_H          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+DEFAULTVALUE              : 0.0
+MIN_VALUE                 : 0
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0  !1.15741E-8
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+SOIL_CHEMISTRY            : 0
+SOIL_QUALITY              : 1
+OLD                       : 0
+DTINTERVAL                : 3600.
+<endproperty>
+
+<beginproperty>
+NAME                      : nitrite
+UNITS                     : mg/l
+DESCRIPTION               : nitrite in soil solution
+PARTICULATE               : 0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_METHOD_V          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+ADVDIFF_METHOD_H          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+DEFAULTVALUE              : 0.0
+MIN_VALUE                 : 0
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0  !1.15741E-8
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+SOIL_CHEMISTRY            : 0
+OLD                       : 0
+SOIL_QUALITY              : 0
+<endproperty>
+
+<beginproperty>
+NAME                      : inorganic phosphorus
+UNITS                     : mg/l
+DESCRIPTION               : inorganic phosphorus in soil solution
+PARTICULATE               : 0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_METHOD_V          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+ADVDIFF_METHOD_H          : 1                     !UpwindOrder1 = 1. UpwindOrder2 = 2. UpwindOrder3 = 3. P2_TVD = 4. CentralDif = 5. LeapFrog = 6
+DEFAULTVALUE              : 0.1
+MIN_VALUE                 : 0
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0  !1.15741E-8
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+SOIL_CHEMISTRY            : 0
+SOIL_QUALITY              : 1
+OLD                       : 0
+DTINTERVAL                : 3600.
+<endproperty>
+
+<beginproperty>
+NAME                      : particulated inorganic phosphorus
+UNITS                     : mgP/kgsoil
+DESCRIPTION               : particulated inorganic phosphorus
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 1.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : ammonia
+UNITS                     : mgN/L
+DESCRIPTION               : ammonia
+PARTICULATE               : 0
+OLD                       : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+ADVECTION_DIFFUSION       : 1
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : soil dry density
+UNITS                     : kg/m3cell
+DESCRIPTION               : soil dry density
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 1490.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : particulated refractory organic carbon
+UNITS                     : mg/kgsoil
+DESCRIPTION               : PROC
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 1086.237852
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : particulate labile organic carbon
+UNITS                     : mgC/kgsoil
+DESCRIPTION               : PLOC
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 57.17041328
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : particulated refractory organic nitrogen
+UNITS                     : mg/kgsoil
+DESCRIPTION               : PRON
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 88.1660298
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : dissolved refractory organic nitrogen
+UNITS                     : mg/L
+DESCRIPTION               : DRON
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : dissolved non-refractory organic nitrogen
+UNITS                     : mg/L
+DESCRIPTION               : DNrON
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : particulate organic nitrogen
+UNITS                     : mg/kgsoil
+DESCRIPTION               : PLON
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 19.05680443
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : particulated refractory organic phosphorus
+UNITS                     : mg/kgsoil
+DESCRIPTION               : PROP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 150.2841331
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : dissolved refractory organic phosphorus
+UNITS                     : mg/L
+DESCRIPTION               : DROP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : dissolved non-refractory organic phosphorus
+UNITS                     : mg/L
+DESCRIPTION               : DNrOP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+<beginproperty>
+NAME                      : particulate organic phosphorus
+UNITS                     : mg/kgsoil
+DESCRIPTION               : PLOP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 16.69823701
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+!<beginproperty>
+!NAME                      : phytoplankton
+!UNITS                     : mg/l
+!DESCRIPTION               : phytoplankton
+!PARTICULATE               : 0
+!BOTTOM_FLUXES             : 0
+!ADVECTION_DIFFUSION       : 1
+!DEFAULTVALUE              : 0.0
+!ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+!TIME_SERIE                : 1
+!OUTPUT_HDF                : 1
+!!MIN_VALUE                 : 0
+!WARN_ON_NEGATIVE_VALUES   : 1
+!<endproperty>
+
+!<beginproperty>
+!NAME                      : zooplankton
+!UNITS                     : mg/l
+!DESCRIPTION               : zooplankton
+!PARTICULATE               : 0
+!BOTTOM_FLUXES             : 0
+!ADVECTION_DIFFUSION       : 1
+!DEFAULTVALUE              : 0.0
+!ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+!TIME_SERIE                : 1
+!OUTPUT_HDF                : 1
+!<endproperty>
+
+
+<beginproperty>
+NAME                      : nitrogen gas
+UNITS                     : mg/L
+DESCRIPTION               : nitrogen gas
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : heterotrophic microorganism nitrogen
+UNITS                     : mgN/kgsoil
+DESCRIPTION               : HETN
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 40.78614815
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : autotrophic microorganism nitrogen
+UNITS                     : mgN/kgsoil
+DESCRIPTION               : AUTN
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 5.826592593
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+
+<beginproperty>
+NAME                      : anaerobic microorganism nitrogen
+UNITS                     : mgN/kgsoil
+DESCRIPTION               : ANAN
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 11.65318519
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : urea
+UNITS                     : mgN/L
+DESCRIPTION               : urea
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : heterotrophic microorganism carbon
+UNITS                     : mgC/kgsoil
+DESCRIPTION               : HETC
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 138.50
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : autotrophic microorganism carbon
+UNITS                     : mgC/kgsoil
+DESCRIPTION               : AUTC
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 19.79
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+<beginproperty>
+NAME                      : anaerobic microorganism carbon
+UNITS                     : mgC/kgsoil
+DESCRIPTION               : ANAC
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 39.57
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : carbon dioxide
+UNITS                     : mg/L
+DESCRIPTION               : carbon dioxide
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : heterotrophic microorganism phosphorus
+UNITS                     : mgP/kgsoil
+DESCRIPTION               : HETP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 11.45178571
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : autotrophic microorganism phosphorus
+UNITS                     : mgP/kgsoil
+DESCRIPTION               : AUTP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 1.431473214
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+
+<beginproperty>
+NAME                      : anaerobic microorganism phosphorus
+UNITS                     : mgP/kgsoil
+DESCRIPTION               : ANAP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 2.862946429
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : oxygen
+UNITS                     : mg/L
+DESCRIPTION               : oxygen that is computed using salinity and temperature and with no sources or sinks
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 10.
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+TRANSPORTED_IN_EVTP       : 1
+<endproperty>
+
+
+<beginproperty>
+NAME                      : salinity
+UNITS                     : psu
+DESCRIPTION               : user defined salinity
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.5
+ADVECTION_DIFFUSION       : 1
+ADVDIFF_MOLECULAR_DIFF_COEF :  0.0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : pH
+UNITS                     : -
+DESCRIPTION               : user defined pH
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 7.34
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : ionic strength
+UNITS                     : mol/L
+DESCRIPTION               : user defined ionic strength
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0001
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : phosphorus adsortion index
+UNITS                     : -
+DESCRIPTION               : user defined phosphorus adsortion index
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.01
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 0
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : heterotrophic microorganism population
+UNITS                     : #org/kgsoil
+DESCRIPTION               : HETPOP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : autotrophic microorganism population
+UNITS                     : #org/kgsoil
+DESCRIPTION               : AUTPOP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+
+<beginproperty>
+NAME                      : anaerobic microorganism population
+UNITS                     : #org/kgsoil
+DESCRIPTION               : ANAPOP
+PARTICULATE               : 0
+OLD                       : 0
+MIN_VALUE                 : 0
+FILE_IN_TIME              : NONE
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.
+ADVECTION_DIFFUSION       : 0
+SOIL_QUALITY              : 1
+DTINTERVAL                : 3600.
+SOIL_CHEMISTRY            : 0
+TIME_SERIE                : 1
+OUTPUT_HDF                : 1
+<endproperty>
+
+
+
+
+
+
+!
+!For more information about MOHID please visit MOHID's forum: http://www.mohid.com/forum/
+!Copyright (C) 2010. Action Modulers. http://www.actionmodulers.com
+!
+

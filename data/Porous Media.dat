@@ -1,0 +1,181 @@
+TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation3D-100layers-20m.dat
+BOTTOM_FILE               : ..\General Data\Digital Terrain\SoilBottom.dat
+OUTPUT_TIME               : 0. 86400.
+
+
+INTEGRATION_TIME            : 0. 86400.
+<beginintegration>
+    <beginwatercontent>
+        BY_LAYER            : 0
+        BY_HORIZON          : 0
+        <begininthorizon>
+            NAME            : Root Layers 60 cm 
+            START           : 5
+            END             : 11
+        <endinthorizon>
+        <begininthorizon>
+            NAME            : Root Layers 300 cm
+            START           : 1
+            END             : 4
+        <endinthorizon>
+           
+    <endwatercontent>
+    
+    <beginwatertable>
+        BY_LAYER            : 1
+        BY_HORIZON          : 0    
+    <endwatertable>
+   <endintegration>
+
+
+
+LIMIT_EVAP_WATER_VEL      : 0
+LIMIT_EVAP_HEAD           : 1
+HEAD_LIMIT                : -150
+IGNORE_WATER_COLUMN_ON_EVAP :  1
+THETA_HYDRO_COEF          : 1.0
+START_WITH_FIELD          : 0
+CONTINUOUS                : 0
+CONDUTIVITYFACE           : 1                  
+HORIZONTAL_K_FACTOR       : 10.0
+CUT_OFF_THETA_LOW         : 1e-15
+CUT_OFF_THETA_HIGH        : 1e-15
+MIN_ITERATIONS            : 1
+MAX_ITERATIONS            : 100000
+GW_SAT_FACTOR 	        	: 0.99
+
+STABILIZE                   : 1
+STABILIZE_FACTOR            : 0.05
+STABILIZE_MIN_FACTOR        : 0.01
+STABILIZE_RESTART_FACTOR    : 0.
+
+DT_FACTOR_DOWN              : 2
+DT_FACTOR_UP                : 1.25
+DT_SPLIT_FACTOR             : 2.00
+DT_CUT_FACTOR               : 0.0005
+
+IMPOSE_BOUNDARY_VALUE     : 0
+IMPOSE_BOUNDARY_BOTTOM    : 1
+BOUNDARY_VALUE            : 0.
+MAX_DTM_FOR_BOUNDARY      : 1000.
+
+<begin_boundary>
+INTERPOLATION_METHOD      : 1   
+<<begin_piezometer>>
+NAME                      : Piezometer1
+COORD_X                   : -0.5
+COORD_Y                   : 3.5
+VALUE_TYPE               : TIMESERIE
+FILENAME                 : ..\General Data\Boundary Conditions\2015\Aquifer2015.dat
+DATA_COLUMN              : 2
+DEFAULTVALUE              : 0.2
+<<end_piezometer>>
+
+<end_boundary>
+
+
+
+
+<beginsoiltype> 
+ID	:	1
+THETA_S	:	0.3 
+THETA_R	:	0.035
+N_FIT	:	1.8
+SAT_K	:	7.22E-06
+ALPHA	:	1.5
+L_FIT	:	0.5
+<endsoiltype>
+ 
+<beginsoiltype> 
+ID	:	2
+THETA_S	:	0.3 
+THETA_R	:	0.035
+N_FIT	:	1.8
+SAT_K	:	3.22E-06
+ALPHA	:	1.5
+L_FIT	:	0.5
+<endsoiltype>
+
+<beginsoiltype> 
+ID	:	3
+THETA_S	:	0.45  
+THETA_R	:	0.067
+N_FIT	:	1.41
+SAT_K	:	5.25E-07
+ALPHA	:	2.0
+L_FIT	:	0.5
+<endsoiltype>
+
+
+
+<beginhorizon>
+!Horizon                  : 0-20cm
+KLB                       : 9
+KUB                       : 11
+
+<beginproperty>
+NAME                      : SoilID
+DEFAULTVALUE              : 1
+INITIALIZATION_METHOD     : CONSTANT
+REMAIN_CONSTANT           : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : Theta
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.25
+<endproperty>
+<endhorizon>
+
+<beginhorizon>
+!Horizon                  : 20-80cm
+KLB                       : 4
+KUB                       : 8
+
+<beginproperty>
+NAME                      : SoilID
+DEFAULTVALUE              : 2
+INITIALIZATION_METHOD     : CONSTANT
+REMAIN_CONSTANT           : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : Theta
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.29
+<endproperty>
+<endhorizon>
+
+<beginhorizon>
+!Horizon                  : >80cm
+KLB                       : 1
+KUB                       : 3
+
+<beginproperty>
+NAME                      : SoilID
+DEFAULTVALUE              : 3
+INITIALIZATION_METHOD     : CONSTANT
+REMAIN_CONSTANT           : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : Theta
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.30
+<endproperty>
+<endhorizon>
+
+
+<beginwaterlevel>
+NAME                      : waterlevel
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 0
+<endwaterlevel>
+
+<beginimpermeablefraction>
+NAME                      : impermeablefraction
+INITIALIZATION_METHOD     : CONSTANT
+DEFAULTVALUE              : 0
+REMAIN_CONSTANT           : 1
+<endimpermeablefraction>

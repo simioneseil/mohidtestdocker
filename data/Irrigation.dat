@@ -1,0 +1,35 @@
+TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+
+!Start / Continuous Computation
+CONTINUOUS                : 0
+
+<BeginSchedule>
+    NAME    : P1
+    METHOD  : 2
+    
+    HEAD_WILTING_POINT          : -5
+    HEAD_TARGET                 : -2.5
+    MIN_INTERVAL_BETWEEN_EVENTS : 86400.0
+    MAX_CONSECUTIVE_DAYS        : 2
+    MAX_DAILY_IRRIGATION_TIME   : 7400.0
+    START_INSTANT_THRESHOLD     : 12.0
+    END_INSTANT_THRESHOLD       : 23.0
+    MAX_DEPTH_TO_CHECK          : 0.6
+    SATURATION_THRESHOLD        : 0.9
+    MAX_SATURATED_FRACTION      : 0.3
+    
+    GEAR_TYPE       : 1
+    GEAR_EFFICIENCY : 0.85
+    GEAR_DEBIT      : 20
+    GEAR_MIN_VEL    : 0.2
+    GEAR_MAX_VEL    : 4
+    
+    <BeginProperty>
+        NAME                    : application area
+        !INITIALIZATION_METHOD   : ASCII_FILE
+        !FILENAME                : ..\general data\application_area.dat
+        DEFAULTVALUE            : 1
+        REMAIN_CONSTANT         : 1
+        OLD                     : 0
+    <EndProperty>
+<EndSchedule>

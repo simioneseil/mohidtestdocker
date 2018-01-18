@@ -1,0 +1,122 @@
+﻿TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+
+PREDICT_DT_METHOD           : 2
+!mm/hour
+RAIN_LIMITS                 : 5 1800 10 600 100 1 
+CLOUD_COVER_METHOD          : 3
+
+<beginproperty>
+NAME                      : precipitation
+UNITS                     : mm
+DESCRIPTION               : precipitation
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+DATA_COLUMN               : 9
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 1
+ACCUMULATE_VALUES         : 1 
+TIME_SERIE                : 1
+OUTPUT_HDF                : 0
+<endproperty>
+
+<beginproperty>
+NAME                      : nitrate
+UNITS                     : mg/l
+DESCRIPTION               : nitrate in rain
+PRECIPITATION             : 1
+DEFAULTVALUE              : 1.
+REMAIN_CONSTANT           : 1
+TIME_SERIE                : 1
+OUTPUT_HDF                : 0
+<endproperty>
+
+<beginproperty>
+NAME                      : oxygen
+UNITS                     : mg/l
+DESCRIPTION               : oxygen in rain
+PRECIPITATION             : 1
+DEFAULTVALUE              : 10.
+REMAIN_CONSTANT           : 1
+TIME_SERIE                : 1
+OUTPUT_HDF                : 0
+<endproperty>
+
+!<beginproperty>
+NAME                      : irrigation
+UNITS                     : mm
+DESCRIPTION               : irrigation
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\Irrigation.dat
+DATA_COLUMN               : 5
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 1
+ACCUMULATE_VALUES         : 1 
+TIME_SERIE                : 1
+OUTPUT_HDF                : 0
+!<endproperty>
+
+<beginproperty>
+NAME                      : solar radiation
+UNITS                     : W/m2
+DESCRIPTION               : Climatologic Solar Radiation
+DEFAULTVALUE              : 0.0
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+DATA_COLUMN               : 11
+TIME_SERIE                : 1
+REMAIN_CONSTANT           : 0
+<endproperty>
+
+<beginproperty>
+NAME                      : air temperature
+UNITS                     : ºC
+DESCRIPTION               : air temperature from time serie
+DEFAULTVALUE              : 20.0
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+DATA_COLUMN               : 8
+REMAIN_CONSTANT           : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : relative humidity
+UNITS                     : fraction
+DESCRIPTION               : relative humidity from time serie
+DEFAULTVALUE              : 0.7
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+DATA_COLUMN               : 10
+REMAIN_CONSTANT           : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : cloud cover
+UNITS                     : fraction
+DESCRIPTION               : cloud cover from radiation
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : wind modulus
+UNITS                     : m/s
+DESCRIPTION               : wind modulus
+FILE_IN_TIME              : TIMESERIE
+FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+DATA_COLUMN               : 12
+DEFAULTVALUE              : 0.0
+REMAIN_CONSTANT           : 0
+TIME_SERIE                : 1
+<endproperty>
+
+<beginproperty>
+NAME                      : wind direction
+UNITS                     : ?
+DESCRIPTION               : wind direction
+DEFAULTVALUE              : 90
+REMAIN_CONSTANT           : 1
+TIME_SERIE                : 1
+<endproperty>
