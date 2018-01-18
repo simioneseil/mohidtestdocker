@@ -1,4 +1,4 @@
-﻿TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+﻿TIME_SERIE_LOCATION       : ../General Data/Timeseries Location/TimeSeriesLocation2D.dat
 
 PREDICT_DT_METHOD           : 2
 !mm/hour
@@ -10,7 +10,7 @@ NAME                      : precipitation
 UNITS                     : mm
 DESCRIPTION               : precipitation
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+FILENAME                  : ../General Data/Boundary Conditions/MachoqueirodeGrouPrec.ets
 DATA_COLUMN               : 9
 DEFAULTVALUE              : 0.0
 REMAIN_CONSTANT           : 1
@@ -46,7 +46,7 @@ NAME                      : irrigation
 UNITS                     : mm
 DESCRIPTION               : irrigation
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\Irrigation.dat
+FILENAME                  : ../General Data/Boundary Conditions/Irrigation.dat
 DATA_COLUMN               : 5
 DEFAULTVALUE              : 0.0
 REMAIN_CONSTANT           : 1
@@ -61,7 +61,7 @@ UNITS                     : W/m2
 DESCRIPTION               : Climatologic Solar Radiation
 DEFAULTVALUE              : 0.0
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+FILENAME                  : ../General Data/Boundary Conditions/MachoqueirodeGrou.ets
 DATA_COLUMN               : 11
 TIME_SERIE                : 1
 REMAIN_CONSTANT           : 0
@@ -73,7 +73,7 @@ UNITS                     : ºC
 DESCRIPTION               : air temperature from time serie
 DEFAULTVALUE              : 20.0
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+FILENAME                  : ../General Data/Boundary Conditions/MachoqueirodeGrou.ets
 DATA_COLUMN               : 8
 REMAIN_CONSTANT           : 0
 TIME_SERIE                : 1
@@ -85,7 +85,7 @@ UNITS                     : fraction
 DESCRIPTION               : relative humidity from time serie
 DEFAULTVALUE              : 0.7
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+FILENAME                  : ../General Data/Boundary Conditions/MachoqueirodeGrou.ets
 DATA_COLUMN               : 10
 REMAIN_CONSTANT           : 0
 TIME_SERIE                : 1
@@ -105,7 +105,7 @@ NAME                      : wind modulus
 UNITS                     : m/s
 DESCRIPTION               : wind modulus
 FILE_IN_TIME              : TIMESERIE
-FILENAME                  : ..\General Data\Boundary Conditions\MachoqueirodeGrou.ets
+FILENAME                  : ../General Data/Boundary Conditions/MachoqueirodeGrou.ets
 DATA_COLUMN               : 12
 DEFAULTVALUE              : 0.0
 REMAIN_CONSTANT           : 0

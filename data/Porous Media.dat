@@ -1,5 +1,5 @@
-TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation3D-100layers-20m.dat
-BOTTOM_FILE               : ..\General Data\Digital Terrain\SoilBottom.dat
+TIME_SERIE_LOCATION       : ../General Data/Timeseries Location/TimeSeriesLocation3D-100layers-20m.dat
+BOTTOM_FILE               : ../General Data/Digital Terrain/SoilBottom.dat
 OUTPUT_TIME               : 0. 86400.
 
 
@@ -66,7 +66,7 @@ NAME                      : Piezometer1
 COORD_X                   : -0.5
 COORD_Y                   : 3.5
 VALUE_TYPE               : TIMESERIE
-FILENAME                 : ..\General Data\Boundary Conditions\2015\Aquifer2015.dat
+FILENAME                 : ../General Data/Boundary Conditions/2015/Aquifer2015.dat
 DATA_COLUMN              : 2
 DEFAULTVALUE              : 0.2
 <<end_piezometer>>
@@ -76,11 +76,21 @@ DEFAULTVALUE              : 0.2
 
 
 
+!<beginsoiltype> 
+!ID	:	1
+!THETA_S	:	0.32 
+!THETA_R	:	0.025
+!N_FIT	:	1.85
+!SAT_K	:	7.22E-06
+!ALPHA	:	2
+!L_FIT	:	0.5
+!<endsoiltype>
+
 <beginsoiltype> 
 ID	:	1
-THETA_S	:	0.3 
+THETA_S	:	0.29 
 THETA_R	:	0.035
-N_FIT	:	1.8
+N_FIT	:	1.85
 SAT_K	:	7.22E-06
 ALPHA	:	1.5
 L_FIT	:	0.5
@@ -90,7 +100,7 @@ L_FIT	:	0.5
 ID	:	2
 THETA_S	:	0.3 
 THETA_R	:	0.035
-N_FIT	:	1.8
+N_FIT	:	1.85
 SAT_K	:	3.22E-06
 ALPHA	:	1.5
 L_FIT	:	0.5
@@ -105,7 +115,6 @@ SAT_K	:	5.25E-07
 ALPHA	:	2.0
 L_FIT	:	0.5
 <endsoiltype>
-
 
 
 <beginhorizon>
@@ -123,7 +132,7 @@ REMAIN_CONSTANT           : 1
 <beginproperty>
 NAME                      : Theta
 INITIALIZATION_METHOD     : CONSTANT
-DEFAULTVALUE              : 0.25
+DEFAULTVALUE              : 0.10
 <endproperty>
 <endhorizon>
 
@@ -142,7 +151,7 @@ REMAIN_CONSTANT           : 1
 <beginproperty>
 NAME                      : Theta
 INITIALIZATION_METHOD     : CONSTANT
-DEFAULTVALUE              : 0.29
+DEFAULTVALUE              : 0.10
 <endproperty>
 <endhorizon>
 
@@ -161,7 +170,7 @@ REMAIN_CONSTANT           : 1
 <beginproperty>
 NAME                      : Theta
 INITIALIZATION_METHOD     : CONSTANT
-DEFAULTVALUE              : 0.30
+DEFAULTVALUE              : 0.15
 <endproperty>
 <endhorizon>
 

@@ -1,5 +1,5 @@
 
-TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+TIME_SERIE_LOCATION       : ../General Data/Timeseries Location/TimeSeriesLocation2D.dat
 Output Options
 !OUTPUT_TIME               : 0. 3600.
 

@@ -6,7 +6,7 @@
 !
 !
 !Compute Options
-NETWORK_FILE              : ..\General Data\Digital Terrain\Drainage Network.dnt
+NETWORK_FILE              : ../General Data/Digital Terrain/Drainage Network.dnt
 GLOBAL_MANNING            : 0.15
 MIN_WATER_DEPTH           : 0.0001
 DISCHARGES                : 0
@@ -23,7 +23,7 @@ INITIAL_WATER_DEPTH       : 0.0
 CONTINUOUS                : 0
 
 !Output Options
-TIME_SERIE_LOCATION       : ..\General Data\NodeTimeSeriesLocation.dat
+TIME_SERIE_LOCATION       : ../General Data/NodeTimeSeriesLocation.dat
 OUTPUT_TIME               : 3600.
 
 

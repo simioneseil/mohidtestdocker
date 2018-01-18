@@ -2,17 +2,17 @@ ATMOSPHERE                : 1
 EVAPOTRANSPIRATION        : 1
 EVAPOTRANSPIRATION_METHOD : 2 
 POROUS_MEDIA              : 1
-POROUS_MEDIA_PROPERTIES   : 1
+POROUS_MEDIA_PROPERTIES   : 0
 VEGETATION                : 1
 RUN_OFF                   : 1
-RUN_OFF_PROPERTIES        : 1
+RUN_OFF_PROPERTIES        : 0
 IRRIGATION                : 0
 
 
 
 DRAINAGE_NET              : 0
 SEDIMENT_QUALITY          : 0
-TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+TIME_SERIE_LOCATION       : ../General Data/Timeseries Location/TimeSeriesLocation2D.dat
 VERIFY_MASS               : 1
 CONTINUOUS                : 0
 DT_DURING_RAIN            : 200
@@ -22,7 +22,7 @@ EVAP_METHOD               : 3
 EVAP_FROM_WATER_COLUMN    : 0
 EVAP_FROM_CANOPY          : 0
 COMPUTE_WATER_BALANCE     : 1
-TIME_SERIE_LOCATION_BWB   : ..\General Data\Timeseries Location\TimeSeriesLocation2D_WB.dat
+TIME_SERIE_LOCATION_BWB   : ../General Data/Timeseries Location/TimeSeriesLocation2D_WB.dat
 
 
 <beginproperty>

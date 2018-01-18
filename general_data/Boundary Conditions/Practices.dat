@@ -1,8 +1,0 @@
-!Time Serie PracticeID     
-SERIE_INITIAL_DATA : 2010 1 1 0 0 0
-TIME_UNITS : DAYS      
-Days      PracticeID 
-<BeginTimeSerie>        
-0         1
-2008      1
-<EndTimeSerie>        

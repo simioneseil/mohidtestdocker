@@ -1,0 +1,151 @@
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 1                
+  NAME                      : PAST
+  VEGETATION_ID             : 12                
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 291.
+PLANTING_HUBASE                   : 0.15
+MATURITY_HU                       : 1600.
+<endtimingparameters>
+
+<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : 100.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.5       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 300.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+<endgrazeparameters>
+
+!<beginharvestkillparameters>
+!   HARVESTKILL_JULIANDAY   : 152
+!   HARVEST_EFFICIENCY      : 1.0
+!<endharvestkillparameters>
+
+<endagriculturalpractice>
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 2                
+  NAME                      : PAST
+  VEGETATION_ID             : 12               
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 282.
+PLANTING_HUBASE                   : 0.15
+MATURITY_HU                       : 1600.
+<endtimingparameters>
+
+<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : -99.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.5       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 300.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+<endgrazeparameters>
+
+<beginharvestkillparameters>
+   HARVESTKILL_JULIANDAY   : 152
+   HARVEST_EFFICIENCY      : 1.0
+<endharvestkillparameters>
+
+<endagriculturalpractice>
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 3                
+  NAME                      : PAST
+  VEGETATION_ID             : 12                
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 263.
+PLANTING_HUBASE                   : 0.15 
+MATURITY_HU                       : 1600.
+<endtimingparameters>
+
+<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : -99.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.5       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 300.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+<endgrazeparameters>
+
+<beginharvestkillparameters>
+   HARVESTKILL_JULIANDAY   : 152
+   HARVEST_EFFICIENCY      : 1.0
+<endharvestkillparameters>
+
+<endagriculturalpractice>
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 4                
+  NAME                      : PAST
+  VEGETATION_ID             : 12                
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 272.
+PLANTING_HUBASE                   : 0.15 
+MATURITY_HU                       : 1600.
+<endtimingparameters>
+
+<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : -99.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.5       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 300.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+<endgrazeparameters>
+
+<beginharvestkillparameters>
+   HARVESTKILL_JULIANDAY   : 152
+   HARVEST_EFFICIENCY      : 1.0
+<endharvestkillparameters>
+
+<endagriculturalpractice>
+
+<beginagriculturalpractice>
+  AGRIC_PRACT_ID            : 5                
+  NAME                      : PAST
+  VEGETATION_ID             : 12                
+  HAS_LEAVES                : 1  
+
+
+<begintimingparameters>
+PLANTING_JULIANDAY                : 273.
+PLANTING_HUBASE                   : 0.15 
+MATURITY_HU                       : 1600.
+<endtimingparameters>
+
+<begingrazeparameters>
+!Graze active if growth model used and in data file GRAZING : 1
+GRAZING_START_JULIANDAY           : -99.      !julian day when grazing will occur
+GRAZING_START_PLANTHU             : 0.5       !Percentage of POTENTIAL YEARLY HU when grazing will occur
+GRAZING_DAYS                      : 10        !Days of grazing (continuous)
+MINIMUM_BIOMASS_FOR_GRAZING       : 1000.       !minimum biomass (kg/ha) for grazing
+GRAZING_BIOMASS                   : 700.       !grazed biomass (kg/ha.day)
+TRAMPLING_BIOMASS                 : 300.       !biomass not eaten but removed from plant and moved to soil, related to grazing efficiency kg/ha.day)
+<endgrazeparameters>
+
+<beginharvestkillparameters>
+   HARVESTKILL_JULIANDAY   : 152
+   HARVEST_EFFICIENCY      : 1.0
+<endharvestkillparameters>
+
+<endagriculturalpractice>
+

@@ -1,4 +1,4 @@
-TIME_SERIE_LOCATION       : ..\General Data\Timeseries Location\TimeSeriesLocation2D.dat
+TIME_SERIE_LOCATION       : ../General Data/Timeseries Location/TimeSeriesLocation2D.dat
 
 !Start / Continuous Computation
 CONTINUOUS                : 0
@@ -27,7 +27,7 @@ CONTINUOUS                : 0
     <BeginProperty>
         NAME                    : application area
         !INITIALIZATION_METHOD   : ASCII_FILE
-        !FILENAME                : ..\general data\application_area.dat
+        !FILENAME                : ../general data/application_area.dat
         DEFAULTVALUE            : 1
         REMAIN_CONSTANT         : 1
         OLD                     : 0

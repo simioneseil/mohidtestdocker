@@ -1,0 +1,38 @@
+IN_BASIN                  : ../General Data/Digital Terrain/topography.dat
+ROOT                      : ../res/
+ROOT_SRT                  : ../res/
+IN_MODEL                  : ../data/Model.dat
+SURF_DAT                  : ../data/Atmosphere.dat
+SURF_HDF                  : ../res/Atmosphere.hdf
+BASIN_DATA                : ../data/Basin.dat
+BASIN_HDF                 : ../res/Basin.hdf
+BASIN_FIN                 : ../res/Basin.fin
+BASIN_GEOMETRY            : ../data/Basin Geometry.dat
+DRAINAGE_NETWORK          : ../data/Drainage Network.dat
+DRAINAGE_NETWORK_HDF      : ../res/Drainage Network.hdf
+DRAINAGE_NETWORK_FIN      : ../res/Drainage Network.fin
+POROUS_DATA               : ../data/Porous Media.dat
+POROUS_HDF                : ../res/Porous Media.hdf
+POROUS_FIN                : ../res/Porous Media.fin
+POROUS_INT_HDF            : ../res/porous media integrated.hdf
+RUNOFF_DATA               : ../data/RunOff.dat
+RUNOFF_HDF                : ../res/RunOff.hdf
+RUNOFF_FIN                : ../res/RunOff.fin
+DOMAIN                    : ../data/Geometry.dat
+VEGETATION_DATA           : ../data/Vegetation.dat
+VEGETATION_HDF            : ../res/Vegetation.hdf
+VEGETATION_FIN            : ../res/Vegetation.fin
+DT_LOG                    : ../res/dt.log
+MOHIDLAND_INI             : ../res/Mohidland.ini
+MOHIDLAND_FIN             : ../res/Mohidland.fin
+IRRIGATION_DATA           : ../data/Irrigation.dat
+IRRIGATION_HDF            : ../res/Irrigation.hdf
+IRRIGATION_FIN            : ../res/Irrigation.fin
+
+POROUS_PROP_DATA          : ../data/PorousMedia Properties.dat
+POROUS_PROP_HDF           : ../res/PorousMedia Properties.hdf
+POROUS_PROP_FIN           : ../res/PorousMedia Properties.fin
+RUNOFF_PROP_DATA          : ../data/RunOff Properties.dat
+RUNOFF_PROP_HDF           : ../res/RunOff Properties.hdf
+RUNOFF_PROP_FIN           : ../res/RunOff Properties.fin
+SQ_DATA                   : ../data/SedimentQuality.dat
